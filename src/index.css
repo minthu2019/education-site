@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.navbar{
+  @apply text-[#fff] py-2 pl-[10%] pr-[10%] fixed top-0 left-0 flex items-center justify-between z-10 w-full
+}
+
+
+
+.navlink{
+    @apply inline-block list-none  text-[12px] cursor-pointer hover:text-green-500
+}
+
+.hero{
+    @apply bg-cover bg-center h-[100vh] w-screen text-[#fff] ; background-image:linear-gradient(rgba(0,0,0,0.7),rgba(8, 0, 88, 0.7)), url("../src/assets/hero.jpg");
+}
+
+.btns{
+  @apply bg-[#fff] text-[#212121] px-4 py-2 text-[12px] rounded-[30px]  cursor-pointer hover:text-green-600
+}
+
+.hero-text{
+  @apply text-center max-w-[800px]
+}
+
+.program{
+   @apply   grid grid-cols-3 gap-10 max-md:px-[6%] max-md:grid-cols-1 
+}
+
+.programs{
+  @apply relative  rounded-xl overflow-hidden 
+}
+
+.caption{
+  @apply absolute inset-0 flex items-center justify-center  text-white font-bold mt-[350px] opacity-0 transition-all duration-500;background: rgba(8,0,58,0.7);
+}
+
+.programs:hover .caption{
+  @apply opacity-100 mt-0
+}
+
+.about{
+  @apply w-full pl-[15%] pr-[15%] mx-auto my-24 flex items-center justify-between gap-10 max-md:px-[6%] max-md:flex-col
+}
+
+.about-left{
+  @apply w-[50%] max-md:w-[80%] max-md:order-2
+}
+
+.about-left img{
+  @apply w-full h-[328px] rounded-md shadow-xl shadow-blue-500 object-cover max-md:order-1
+}
+
+.about-right{
+  @apply w-[50%] max-md:w-[80%]
+}
+
+.about-right h3{
+  @apply text-sm uppercase font-normal mb-2
+}
+
+.about-right h2{
+  @apply capitalize text-4xl max-md:text-2xl text-green-500 font-bold mb-2 
+}
+
+.about-right p{
+  @apply text-[12px] font-normal mb-1
+}
+
+.campus{
+  @apply w-full pl-[15%] pr-[15%] mx-auto mt-10 mb-24 flex items-center justify-center flex-col
+}
+
+.gallery{
+  @apply grid grid-cols-4 gap-8 mb-6 max-md:grid-cols-2
+}
+
+.gallery img{
+  @apply w-[200px] h-[250px] rounded-md object-cover 
+}
+
+.campusBtn{
+  @apply bg-green-500 flex items-center justify-center gap-2
+}
+
+.testimonials{
+  @apply w-full pl-[10%] pr-[10%]  mt-10 mb-24
+}
+
+.testimonialSlide{
+  @apply relative w-full flex items-center justify-center
+}
+
+.card{
+  @apply flex w-[400px] flex-col  gap-2 p-4 m-4 shadow-xl shadow-blue-500 rounded-lg
+}
+
+.cardImage{
+  @apply w-10 h-10 rounded-full border-2 border-blue-600 bg-cover bg-center
+}
+
+.cardText{
+  @apply flex flex-col 
+}
+
+.cardText h1{
+  @apply text-xl font-bold text-green-500
+}
+
+.cardText h3{
+  @apply text-sm font-normal text-gray-500
+}
+
+.card p{
+  @apply text-sm font-normal text-gray-400
+}
+
+.changebtn{
+  @apply absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform  justify-between max-md:justify-center max-md:gap-4 max-md:relative max-md:left-0 max-md:right-0 max-md:bottom-[-20px]
+}
+
+.contact{
+  @apply w-full pl-[10%] pr-[10%]  my-10 flex items-center justify-between max-md:flex-col max-md:gap-10
+}
+
+.contact-col-left{
+  @apply w-[48%] px-10 max-md:w-[80%] max-md:order-1
+}
+
+.contact-col-left h3{
+  @apply text-lg font-bold text-black flex items-center gap-2 mb-2 uppercase 
+}
+
+.contact-col-left p{
+  @apply text-sm font-normal text-gray-600  mb-6
+}
+
+.contact-col-left ul{
+  @apply flex flex-col  gap-3 font-normal text-sm text-gray-600
+}
+
+.contact-col-left ul li{
+  @apply flex items-center gap-2
+}
+
+.contact-col-right{
+  @apply w-[48%] px-10   max-md:w-[80%] max-md:order-1
+}
+.contact-col-right form{
+  @apply flex flex-col  
+}
+
+.contact-col-right form input{
+  @apply w-full mb-4 outline-none p-2 rounded-lg bg-blue-100 placeholder:text-sm text-gray-500
+}
+
+.contact-col-right form textarea{
+  @apply w-full mb-4 outline-none p-2 rounded-lg bg-blue-100 placeholder:text-sm text-gray-500 resize-none
+}
+
+.contactbtn{
+  @apply w-[100px] flex items-center px-4 rounded-lg bg-blue-500 text-black 
+}
+
+.footer{
+  @apply  w-[90%] mx-auto   mt-10 border-t border-blue-900 py-4 flex items-center justify-between text-blue-900 max-md:flex-col
+}
+
+.footer ul{
+  @apply flex gap-4 items-center justify-center
+}
+
