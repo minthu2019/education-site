@@ -35,7 +35,7 @@ const Navbar = () => {
       }}
       className={` ${
         isScorolled && " bg-blue-500 bg-opacity-80"
-      }  navbar max-md:px-[2%] max-md:py-0`}
+      }  navbar max-md:px-[4%] max-md:py-0 max-md:w-screen`}
     >
       <div className="flex gap-2">
         <img className="w-[20px] max-md:h-[30px]" src={logo} alt="logo" />
